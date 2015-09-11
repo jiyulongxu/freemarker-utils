@@ -14,31 +14,41 @@
 </head>
 <body>
     <div class="container">
-    	<#if apidoclist??>
-			<#list apidoclist as apidoc>       
-		        <div class="widget">
-		        	<div class="row">
-		        		<div class="col-sm-3"><h3 class="title">${apidoc.category}</h3></div>
-		        	</div>
-		        </div>
-		        <#assign tabList="${apidoc.tabList}">
-		        <#list tabList as tab>
-		        <div class="row">
-		            <div class="col-sm-3">
-		                <div class="case-item">
-		                    <div class="ih-item circle effect1">
-		                        <a href="${tab.url}" target="_blank">
-		                            <div class="spinner"></div>
-		                            <div class="img"><img src="../../images/java.png" alt="${tab.name}"></div>
-		                            <div class="info"><div class="info-back"><h3>${tab.name}</h3><p>${tab.remark}</p></div></div>
-		                        </a>
-		                    </div>
-		                </div>
-		            </div>     
-		        </div>
-		        </#list>
-		    </#list>
-		</#if>
+	<#if apidoclist??>
+		<#list apidoclist as apidoc>
+		<#if apidoc.type == "1">
+		<div class="widget"><div class="row"><div class="col-sm-3"><h3 class="title">${apidoc.category}</h3></div></div></div>
+		<div class="row">
+        	<#list apidoc.tab as tab>
+	        <div class="col-sm-3">
+	            <div class="case-item">
+	                <div class="ih-item circle effect1">
+	                    <a href="${tab.url}" target="_blank">
+	                        <div class="spinner"></div>
+	                        <div class="img"><img src="../../images/${tab.name?lower_case}.png" alt="${tab.name}"></div>
+	                        <div class="info"><div class="info-back"><h3>${tab.name}</h3><p>${tab.remark}</p></div></div>
+	                    </a>
+	                </div>
+	            </div>
+	        </div>     
+        	</#list>
+        </div>
+        </#if>
+        <#if apidoc.type == "2">
+        <div class="widget"><div class="row"><div class="col-sm-3"><h3 class="title">${apidoc.category}</h3></div></div>         
+	    <div class="row">
+	    	<div class="col-sm-12">
+		    	<div class="content tag-cloud">
+		    	<#list apidoc.tab as tab>
+		    		<a href="${tab.url}" target="_blank">${tab.name}</a>
+		    	</#list>
+		    	</div>
+	    	</div>
+	    </div>
+	    </div>
+	    </#if>
+	    </#list>
+	</#if>
     </div>
 </body>
 </html>

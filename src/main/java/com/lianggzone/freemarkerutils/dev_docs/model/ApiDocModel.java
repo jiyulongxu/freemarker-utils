@@ -16,7 +16,7 @@ public class ApiDocModel {
 
     private String category;
     private String type;
-    private List<ApiTabModel> tabList;
+    private List<ApiTabModel> tab;
     
     public String getCategory() {
         return category;
@@ -31,9 +31,9 @@ public class ApiDocModel {
         this.type = type;
     }
     public List<ApiTabModel> getTab() {
-        return tabList;
+        return tab;
     }
-    public void setTab(List<ApiTabModel> tabList) {
-        this.tabList = tabList;
+    public void setTab(List<ApiTabModel> tab) {
+        this.tab = tab;
     }
 }

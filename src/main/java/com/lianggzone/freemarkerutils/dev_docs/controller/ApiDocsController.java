@@ -31,25 +31,42 @@ public class ApiDocsController {
 
     private final static Logger logger = LoggerFactory.getLogger(ApiDocsController.class);
     
+    public final static String PATH_API_DOCS_JAVA = "E:/百度云同步盘/代码同步/website/dev-docs/src/docs/api_docs_java.html";
+    public final static String PATH_API_DOCS_WEB = "E:/百度云同步盘/代码同步/website/dev-docs/src/docs/api_docs_web.html";
+    public final static String PATH_API_DOCS_DATABASE = "E:/百度云同步盘/代码同步/website/dev-docs/src/docs/api_docs_database.html";
+    
+    public static String PATH_JSON_DOCS_JAVA = Thread.currentThread().getContextClassLoader().getResource("dev_docs/api_docs_java.json").getPath();
+    public static String PATH_JSON_DOCS_WEB = Thread.currentThread().getContextClassLoader().getResource("dev_docs/api_docs_web.json").getPath();
+    public static String PATH_JSON_DOCS_DATABASE = Thread.currentThread().getContextClassLoader().getResource("dev_docs/api_docs_database.json").getPath();
+    
+    public static String PATH_FTL_DOCS = Thread.currentThread().getContextClassLoader().getResource("dev_docs/api_docs.ftl").getPath();
+    
+    
     
     public static void main(String[] args) {
         ApiDocsController apiDocsController = new ApiDocsController();
         
-        String content = apiDocsController.getApiDocsContent();
-
-        List<ApiDocModel> apiDocList = apiDocsController.getApiDocsObj(content);
+        apiDocsController.createHtml(PATH_FTL_DOCS, PATH_API_DOCS_JAVA,
+        		apiDocsController.getApiDocsObj(apiDocsController.getApiDocsContent(PATH_JSON_DOCS_JAVA)));
         
-        apiDocsController.createHtml(apiDocList);
+        apiDocsController.createHtml(PATH_FTL_DOCS, PATH_API_DOCS_WEB,
+        		apiDocsController.getApiDocsObj(apiDocsController.getApiDocsContent(PATH_JSON_DOCS_WEB)));
+        
+        apiDocsController.createHtml(PATH_FTL_DOCS, PATH_API_DOCS_DATABASE,
+        		apiDocsController.getApiDocsObj(apiDocsController.getApiDocsContent(PATH_JSON_DOCS_DATABASE)));
     }
     
-    private void createHtml(List<ApiDocModel> apiDocList){
-        String apiDocsFtl = Thread.currentThread().getContextClassLoader().getResource("dev_docs/api_docs.ftl").getPath();
-        
-        Map<String, Object> data = new HashMap<String, Object>();
-        data.put("apidoclist", apiDocList);
-        
+    /**
+     * 创建HTML
+     * @param filePath
+     * @param ftlPath
+     * @param apiDocList
+     */
+    private void createHtml(String ftlPath, String filePath, List<ApiDocModel> apiDocList){
         try {
-            FreeMarkerFactory.createHTML(apiDocsFtl, "d：/api_docs.html", data);
+        	Map<String, Object> param = new HashMap<String, Object>();
+        	param.put("apidoclist", apiDocList);
+            FreeMarkerFactory.createHTML(ftlPath, filePath, param); 
         } catch (IOException e) {
             logger.error("方法:{}, 状态:{}, 错误详情:{}", new Object[] {"createHtml", "失败", e});
         }
@@ -83,16 +100,14 @@ public class ApiDocsController {
         return apiDocList;
     }
     
-    
     /**
      * 获取ApiDocs内容
      * @return
      */
-    private String getApiDocsContent(){
-        String apiDocsPath = Thread.currentThread().getContextClassLoader().getResource("dev_docs/api_docs.json").getPath();
+    private String getApiDocsContent(String filePath){
         String json = "";
         try {
-            json = FileUtils.readFileToString(new File(apiDocsPath));
+            json = FileUtils.readFileToString(new File(filePath));
         } catch (IOException e) {
             logger.error("方法:{}, 状态:{}, 错误详情:{}", new Object[] {"getApiDocsContent", "失败", e});
         } 

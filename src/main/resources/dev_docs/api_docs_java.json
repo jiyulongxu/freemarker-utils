@@ -1,0 +1,178 @@
+{
+    "items": [
+        {
+            "category": "Java",
+            "type": "1",
+            "tab": [
+                {
+                    "name": "Java",
+                    "url": "http://docs.oracle.com/javase/8/docs/api/",
+                    "remark": "Java™ Platform, Standard Edition 8 API"
+                },
+                {
+                    "name": "JavaEE",
+                    "url": "https://docs.oracle.com/javaee/7/api/",
+                    "remark": "Java(TM) EE 7 Specification APIs"
+                },
+                {
+                    "name": "Tomcat",
+                    "url": "http://tomcat.apache.org/tomcat-8.0-doc/index.html",
+                    "remark": "Apache Tomcat 8"
+                },
+                {
+                    "name": "Spring",
+                    "url": "http://docs.spring.io/spring/docs/current/javadoc-api/",
+                    "remark": "Spring Framework RELEASE API"
+                },
+                {
+                    "name": "Spring Security",
+                    "url": "http://docs.spring.io/spring-security/site/docs/4.0.1.RELEASE/apidocs/",
+                    "remark": "Spring Security Framework RELEASE API"
+                },
+                {
+                    "name": "MyBatis",
+                    "url": "http://mybatis.github.io/mybatis-3/zh/",
+                    "remark": "MyBatis 3 官方文档"
+                },
+                {
+                    "name": "Hibernate",
+                    "url": "http://docs.jboss.org/hibernate/orm/5.0/javadocs/",
+                    "remark": "Hibernate JavaDoc"
+                },
+                {
+                    "name": "DWR",
+                    "url": "http://directwebremoting.org/dwr/documentation/index.html",
+                    "remark": "DWR Documentation Index"
+                }
+                
+            ]
+        },
+        {
+            "category": "类库",
+            "type": "2",
+            "tab": [
+                {
+                    "name": "ant",
+                    "url": "http://ant.apache.org/manual/index.html",
+                    "remark": "Apache Ant™ 1.9.6 Manual"
+                },
+                {
+                    "name": "guava",
+                    "url": "http://google.github.io/guava/releases/18.0/api/docs/",
+                    "remark": "Guava for Java 18.0 API"
+                },
+                {
+                    "name": "fastjson",
+                    "url": "https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98",
+                    "remark": "fastjson 常见问题"
+                },
+                {
+                    "name": "freemarker",
+                    "url": "http://freemarker.org/docs/api/index.html",
+                    "remark": "FreeMarker 2.3.23 API"
+                },
+                {
+                    "name": "driud",
+                    "url": "https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98",
+                    "remark": "Driud 常见问题"
+                },
+                {
+                    "name": "c3p0",
+                    "url": "http://www.mchange.com/projects/c3p0/apidocs/index.html",
+                    "remark": "c3p0 api"
+                },
+                {
+                    "name": "dbcp",
+                    "url": "http://commons.apache.org/proper/commons-dbcp/api-2.1.1/index.html",
+                    "remark": "Apache Commons DBCP 2.1.1 API"
+                },
+                {
+                    "name": "HttpClient",
+                    "url": "http://hc.apache.org/httpcomponents-client-4.5.x/index.html",
+                    "remark": "HttpClient Documentation"
+                },
+                {
+                    "name": "commons-lang",
+                    "url": "http://commons.apache.org/proper/commons-lang/javadocs/api-release/index.html",
+                    "remark": "Apache Commons Lang 3.4 API"
+                },
+                {
+                    "name": "commons-codec",
+                    "url": "http://commons.apache.org/proper/commons-codec/archives/1.10/apidocs/index.html",
+                    "remark": "Apache Commons Codec"
+                },
+                {
+                    "name": "commons-beanutils",
+                    "url": "http://commons.apache.org/proper/commons-beanutils/javadocs/v1.9.2/apidocs/index.html",
+                    "remark": "Apache Commons BeanUtils 1.9.2 API"
+                },
+                {
+                    "name": "commons-net",
+                    "url": "http://commons.apache.org/proper/commons-net/javadocs/api-3.3/index.html",
+                    "remark": "Commons Net 3.3 API"
+                },
+                {
+                    "name": "commons-io",
+                    "url": "http://commons.apache.org/proper/commons-io/javadocs/api-2.4/index.html",
+                    "remark": "Commons IO 2.4 API"
+                },
+                {
+                    "name": "commons-fileupload",
+                    "url": "http://commons.apache.org/proper/commons-fileupload/apidocs/index.html",
+                    "remark": "Apache Commons FileUpload 1.4-SNAPSHOT API"
+                },
+                {
+                    "name": "commons-dbutils",
+                    "url": "http://commons.apache.org/proper/commons-fileupload/apidocs/index.html",
+                    "remark": "Apache Commons DbUtils 1.6 API"
+                },
+                {
+                    "name": "commons-compress",
+                    "url": "http://commons.apache.org/proper/commons-fileupload/apidocs/index.html",
+                    "remark": "Apache Commons Compress 1.10 API"
+                },
+                {
+                    "name": "commons-collections",
+                    "url": "http://commons.apache.org/proper/commons-collections/javadocs/api-release/index.html",
+                    "remark": "Apache Commons Collections 4.0 API"
+                },
+                {
+                    "name": "commons-math",
+                    "url": "http://commons.apache.org/proper/commons-math/javadocs/api-3.5/index.html",
+                    "remark": "Apache Commons Math 3.5 API"
+                },
+                {
+                    "name": "jackson",
+                    "url": "http://fasterxml.github.io/jackson-core/javadoc/2.1.0/",
+                    "remark": "Jackson JavaDocs"
+                },
+                {
+                    "name": "jsoup",
+                    "url": "http://jsoup.org/apidocs/",
+                    "remark": "jsoup 1.8.3 API"
+                },
+                {
+                    "name": "junit",
+                    "url": "http://junit.org/javadoc/latest/index.html",
+                    "remark": "JUnit 4.12 API"
+                },
+                {
+                    "name": "zxing",
+                    "url": "http://zxing.github.io/zxing/apidocs/index.html",
+                    "remark": "ZXing 3.2.1 API"
+                },
+                {
+                    "name": "pinyin4j",
+                    "url": "http://pinyin4j.sourceforge.net/pinyin4j-doc/",
+                    "remark": "pinyin4j API"
+                },
+                {
+                    "name": "jcifs",
+                    "url": "http://pinyin4j.sourceforge.net/pinyin4j-doc/",
+                    "remark": "The Java CIFS Client Library"
+                }
+                
+            ]
+        }
+    ]
+}
