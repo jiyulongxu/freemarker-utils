@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
-extraProperties=
+extraProperties=sonar.host.url\=http\://sonar.debug.sdp.nd
 projectKey=com.lianggzone\:freemarker-utils
 serverUrl=http\://sonar.sdp.nd
 version=2
